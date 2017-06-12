@@ -1,0 +1,52 @@
+body
+{
+	background-image:url(../../Images/fond.png);
+	background-attachment:fixed;
+}
+
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+.copyright a 
+{
+    color: #8fcac0;
+}
+.design {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+    text-align: right;
+}
+.design a 
+{
+    color: #8fcac0;
+}
+
+.resolve
+{
+    position: relative;
+}
+
+.footer-bottom {
+    background-color: #007c9b;
+    min-height: 30px;
+    width: 100%;
+    margin-top: 145px; 
+    left: 0; 
+    position: absolute;
+    right: 0;
+}
+
+.glyphicon
+{
+    font-size : 20px;
+}
+
+.alinea
+{
+    margin-left: 20px;
+}
