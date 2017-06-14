@@ -1,0 +1,97 @@
+body /* CSS Du corps de la page (modifier quelque chose ici revient à modifier l'ensemble de la page) */
+{
+	background-image:url(../../Images/fond.png);
+	background-attachment:fixed;
+}
+
+.Lienbootstrap { /* CSS du lien cliquable bootstrap en pied de page */
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+.Lienbootstrap a /* CSS qui modifie la couleur du lien cliquable bootstrap après avoir cliqué */
+{
+    color: #8fcac0;
+}
+.Footertextgauche { /* CSS qui met en forme le texte qui se situe à gauche sur le footer */
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+    text-align: right;
+}
+
+.Footertextgauche a 
+{
+    color: #8fcac0; /* CSS qui modifie la couleur du lien cliquable du texte à gauche après avoir cliqué */
+}
+
+.footer-bottom { /* CSS qui met en forme le pied de page */
+    background-color: #007c9b;
+    width: 100%;
+    left: 0; 
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.glyphicon /* CSS qui modifie la taille des Glyphicons */
+{
+    font-size : 20px;
+}
+
+.alinea /* Classe à appeler dans le HTML afin de créer un petit alinéa de 20 pixels */
+{
+    margin-left: 20px;
+}
+
+.effetboutonlire /* CSS d'une animation qui élargie un bouton */
+{
+    width: 125px;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.effetboutonlire:hover /* CSS qui définie la taille maximum de l'objet après l'animation */
+{
+    width: 150px;
+}
+
+.thumbnail /* CSS des cadre menu principal, bordures avec couleurs qui changent */
+{
+    border-style: solid;
+    border-color: #8fcac0;
+    border-width: 3px;
+    animation-name: thumbnail;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+
+.thumbnail:hover /* CSS de l'effet de zoom sur une partie du menu principal */
+{
+    transform: scale(1.2);
+    border-width: 7px;
+    box-shadow: 0 0 65px #CDBE9F inset, 0 0 20px #BEAE8C inset, 0 0 15px #b6a684;
+}
+
+@keyframes thumbnail  /* CSS qui donne les couleurs à l'animation */
+{ 
+    0%   {border-color: #007c9b;}
+    100% {border-color: #8fcac0;}
+}
+
+@keyframes effetzoom /* Animation (Zoom) */
+{
+    0% {transform: scale(0.1);opacity: 0;}
+    60% {transform: scale(1.2); opacity: 1;}
+    100% {transform: scale(1);}
+}
+
+.menuanimation /* Lance l'animation du début (zoom) */
+{
+    animation-duration: 2s;
+    animation-name: effetzoom;
+}
