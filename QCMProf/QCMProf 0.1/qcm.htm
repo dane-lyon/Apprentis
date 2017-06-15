@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+		<script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="Images/logo.png" />
+		<title>QCMProf</title>
+	</head>
+	<body>
+		<div class="container">
+			<center><h1>QCMProf v0.1</h1></center>
+			</br>
+			<div class="thumbnail" id="start">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<center><h3></br></br>Êtes-vous prêt pour le QCM ?</h3></br></br></br>
+					<p><h5>- Le QCM comporte 10 questions</h5></p>
+					<p><h5>- Qu'une seule réponse par question n'est possible</h5></p>
+					<p><h5>- À la fin 3 formations vous seront proposées</h5></p>
+					<p><h5></br></h5></p></center></br></br>
+					<p><center><a class="btn btn-primary effetboutonlire" role="button" onclick="afficherq1();">Je suis prêt ! <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></center></p>
+				</div>
+			</div>
+			<div class="thumbnail" id="q1" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Question 1/10</span>
+					<p><center><a class="btn btn-primary effetboutonlire" role="button" onclick="revenirstart();">Revenir en arrière !<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></center></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

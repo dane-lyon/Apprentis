@@ -1,0 +1,29 @@
+body
+{
+	background-image:url(../../Images/fond.png);
+	background-attachment:fixed;
+}
+
+.thumbnail
+{
+    left: 35%;
+    top: 20%;
+    width: 30%;
+    height: 60%;
+    border-style: solid;
+    border-color: #8fcac0;
+    border-width: 3px;
+    animation-name: thumbnail;
+    animation-play-state: paused;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+
+@keyframes thumbnail
+{ 
+    100% {filter: blur(50px);}
+}
+
+
