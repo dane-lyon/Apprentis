@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="Model/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="Model/css/style.css">
+		<script type="text/javascript" src="Model/js/jquery.js"></script>
+		<script type="text/javascript" src="Model/js/bootstrap.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="Images/logo.png" />
+		<title>QCMProf</title>
+	</head>
+	<body>
+		<div class="container">
+			<center><h1>QCMProf v0.1</h1></center>
+			</br>
+			<div class="thumbnail" id="start">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<center><h3></br></br>Êtes-vous prêt pour le QCM ?</h3></br></br></br></center>
+					<div class="alinea">
+						<p><h5>- Le QCM comporte 10 questions</h5></p>
+						<p><h5>- Qu'une seule réponse par question n'est possible</h5></p>
+						<p><h5>- À la fin 3 formations vous seront proposées</h5></p>
+					</div>
+				</div>
+				<ul class="pager">
+					<!-- <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Précédent</a></li> -->
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('start', 'q1');">Commencer <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q1" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 0 réponse validée">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 1</h3></br></center>
+					<center><h4>Votre salle de classe est organisée...</h4></center></br>
+					<div class="alinea">
+						<input type="radio" name="q1" id="q1r1" checked/> ...de façon traditionnelle.<br />
+						<input type="radio" name="q1" id="q1r2"/> ...en îlot, en U, en espace de travail.<br />
+						<input type="radio" name="q1" id="q1r3"/> ...ça dépend des cours et des activités.<br />
+						<input type="radio" name="q1" id="q1r4"/> Je n'ai pas le choix.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q1', 'start');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q1', 'q2')";> Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q2" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 1 réponse validée">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 10%">1/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 2</h3></br></center>
+					<center><h4>Pour vous, le smartphone c'est :</h4></center></br>
+					<div class="alinea">
+						<input type="radio" name="q2" id="q2r1" checked/> Bien éteins au fond du cartable.<br />
+						<input type="radio" name="q2" id="q2r2"/> À autoriser au lycée pour prendre des photos du tableau.<br />
+						<input type="radio" name="q2" id="q2r3"/> Travailler avec avec les outils des élèves.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q2', 'q1');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q2', 'q3');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q3" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 2 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">2/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 3</h3></br></center>
+					<center><h4>"Au terme de mon année d'activité j'ai le sentiment de bien maitriser mon environnement numérique de travail (national, académique et en établissement)"</h4></center></br>
+					</br><center><i style="font-size:10px;">Notez votre niveau de maîtrise sur 6</i><input id="q3r1" type="range" value="3" max="6" min="1" step="1" style="width: 50%;" oninput="document.getElementById('AfficheRange').textContent=value" /><span id="AfficheRange">3</span></center>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q3', 'q2');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q3', 'q4');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q4" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 3 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 30%">3/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 4</h3></br></center>
+					<center><h4>Question gestion de classe…</h4></center></br>
+					<div class="alinea2">
+						<input type="radio" name="q4" id="q4r1" checked/> J'ai parfois du mal à asseoir mon autorité.<br />
+						<input type="radio" name="q4" id="q4r2"/> Je suis parfois dérouté par mes élèves.<br />
+						<input type="radio" name="q4" id="q4r3"/> Je me sens en confiance avec les élèves.<br />
+						<input type="radio" name="q4" id="q4r4"/> Je me sens en confiance et peu proposer des activités qui risquent de produire de l'agitation.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q4', 'q3');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q4', 'q5');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q5" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 4 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">4/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 5</h3></br></center>
+					<center><h4>Gestion de hétérogénéité</h4></center></br>
+					<div class="alinea2">
+						<input type="radio" name="q5" id="q5r1" checked/> C'est surtout proposer des activités et des supports différents selon des groupes de niveaux.<br />
+						<input type="radio" name="q5" id="q5r2"/> Prendre en compte les besoins personnalisés et individuels de chacun en proposant des parcours personnalisés.<br />
+						<input type="radio" name="q5" id="q5r3"/> S'adapter aux profils d'apprentissage des élèves (kinesthétique, visuel, auditif).<br />
+						<input type="radio" name="q5" id="q5r4"/> Favoriser le tutorat entre paire.<br />
+						<input type="radio" name="q5" id="q5r5"/> Repenser le temps scolaire  grâce à l'enseignement à distance.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q5', 'q4');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q5', 'q6');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q6" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 5 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%">5/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 6</h3></br></center>
+					<center><h4>Pour évaluer mes élèves</h4></center></br>
+					<div class="alinea2">
+						<input type="radio" name="q6" id="q6r1" checked/> J'utilise surtout l'évaluation sommative papier.<br />
+						<input type="radio" name="q6" id="q6r2"/> J'utilise parfois des logiciels, applications ou sites pour une évaluation diagnostique.<br />
+						<input type="radio" name="q6" id="q6r3"/> J'utilise des logiciels, applications ou sites durant le cours pour une évaluation formative.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q6', 'q5');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q6', 'q7');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q7" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 6 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%">6/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 7</h3></br></center>
+					<center><h4>Pour partager et communiquer avec les élèves et mes collègues j'utilise plutôt</h4></center></br>
+					<div class="alinea">
+						<input type="radio" name="q7" id="q7r1" checked/> La messagerie académique.<br />
+						<input type="radio" name="q7" id="q7r2"/> Ma messagerie personnelle.<br />
+						<input type="radio" name="q7" id="q7r3"/> L'ENT.<br />
+						<input type="radio" name="q7" id="q7r4"/> J'utilise peu les moyens numériques.<br />
+						<input type="radio" name="q7" id="q7r5"/> Les réseaux sociaux.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q7', 'q6');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q7', 'q8');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q8" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 7 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">7/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 8</h3></br></center>
+					<center><h4>Pour favoriser la motivation et l'implication de mes élèves durant mes cours</h4></center></br>
+					<div class="alinea">
+						<input type="radio" name="q8" id="q8r1" checked/> Je varie les activités.<br />
+						<input type="radio" name="q8" id="q8r2"/> J'utilise des outils numériques interactifs.<br />
+						<input type="radio" name="q8" id="q8r3"/> Je favorise le pédagogie par projet.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q8', 'q7');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q8', 'q9');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q9" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 8 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 80%">8/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 9</h3></br></center>
+					<center><h4>Moi et les nouvelles technologies</h4></center>
+					<div class="alinea2">
+						<input type="radio" name="q9" id="q9r1" checked/> J'ai un téléphone et un PC c'est déjà pas mal.<br />
+						<input type="radio" name="q9" id="q9r2"/> J'aime tester des nouveaux outils et pratique une veille.<br />
+						<input type="radio" name="q9" id="q9r3"/> J'en ai surtout des usages personnelles.<br />
+						<input type="radio" name="q9" id="q9r4"/> J'ai un côté geek et je teste pas mal de chose.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q9', 'q8');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q9', 'q10');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="q10" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 9 réponses validées">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 90%">9/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br></br>Question 10</h3></br></center>
+					<center><h4>J'utilise la vidéo dans mon enseignement pour</h4></center>
+					<div class="alinea2">
+						<input type="radio" name="q10" id="q10r1" checked/> Comme support pédagogique et documentaire.<br />
+						<input type="radio" name="q10" id="q10r2"/> Comme réalisation finale à faire produire par les élèves.<br />
+						<input type="radio" name="q10" id="q10r3"/> J'utilise peu la vidéo pour tes questions techniques.<br />
+						<input type="radio" name="q10" id="q10r4"/> Par ce que ça fonctionne bien pédagogiquement avec les élèves.<br />
+						<input type="radio" name="q10" id="q10r5"/> J'associe souvent mutlimédia et interactivité.<br />
+						<input type="radio" name="q10" id="q10r6"/> En classe inversée.<br />
+					</div>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('q10', 'q9');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite"><a href="#" onclick="Anim_Q('q10', 'fin');">Question suivante <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="fin" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<div class="haut-droite barre">
+						<div class="progress" data-toggle="tooltip" data-placement="bottom" title="Progression du QCM : 10 réponses validées">
+							<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 1000%">10/10
+							</div>
+						</div>
+					</div>
+					<center><h3></br>Fin</h3></br></center>
+					<center><h3>Vous avez répondu aux 10 questions</h3></br></br></br></br></center>
+					<center><h5><u>Recommandation</u> : Avant de confirmer et ainsi valider vos choix, nous vous conseillons de revenir en arrière afin de vérifier les réponses cochées.</h5></center>
+				</div>
+				<center><div id="warn_NotChecked"><input type="checkbox" id="cChoix" onclick="VerifChoix();"> Je pense avoir coché les bonnes cases</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('fin', 'q10');"><span aria-hidden="true">&larr;</span> Question précédente</a></li>
+					<li class="next bas-droite disabled" id="btn_valider"><a href="#" onclick="if(document.getElementById('cChoix').checked == true){Anim_Q('fin', 'resultat');test();}else{document.getElementById('warn_NotChecked').style.color = 'red'}">Valider mes choix <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+			<div class="thumbnail" id="resultat" style="visibility:hidden;">
+				<div class="caption">
+					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
+					<center><h3></br></br>Résultat</h3></br></br></br>
+				</div>
+				<ul class="pager">
+					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('resultat', 'start');"><span aria-hidden="true">&larr;</span> Refaire le QCM</a></li>
+					<li class="next disabled bas-droite"><a href="#" onclick="Anim_Q('fin', 'start');">Valider <span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript" src="Model/js/qcm.js"></script>
+<script type="text/javascript" src="Model/js/r_qcm.js"></script>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Test</title>
+	</head>
+	<body>
+    	<div id="tab"></div>
+	</body>
+</html>
+
+<script>
+
+var test = 500;
+  
+var nombres = new Array(1, 7, 2, 7, test, 4, 4, 4, 5, 0, -666);
+nombres.sort(compare);
+alert(nombres);
+
+function compare(x, y) {
+    return y - x;
+}
+</script>
