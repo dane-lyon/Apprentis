@@ -33,44 +33,7 @@ img {
 margin-bottom : 1%;	
 }
 
-
-/* ----------------------- Page1 ----------------------- */
-.bouton a {
-background-color: #00CAFD;
+label {
 display:block;
-width:300px;
-line-height:50px;
-text-align:center;
-color:white;
-text-decoration:none;
-float:left;
-margin:2px;
-
-}
-
-.bouton a:hover {
-background-color: #00ECFD;
-}
-
-a{
-    text-decoration: none;/*Pour que le lien ne soit plus "souligné"...*/
-}
-
-
-/* ----------------------- Creerfiche ----------------------- */
-.center-div {
-     width: 90%;
-	 text-align: center;
-}
-
-textarea{
-resize:none;
-width: 100%;
-}
-
-
-/* ----------------------- Lirefiche ----------------------- */
-.liste {
-overflow:auto;  /*pour activer les scrollbarres*/
-height: 520px;
+width:500px;
 }

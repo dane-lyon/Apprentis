@@ -8,19 +8,12 @@
 		 	<img src="logo.png" class="logo">
 		
 		<center>
-        <p>Entrez le mot de passe pour avoir accès aux fiches:</p>
-        <form action="verifmdp.php" method="post">
-
-            <p>
-
-            <input type="password" name="mot_de_passe" />
-
-            <input type="submit" value="Valider" />
-
-            </p>
+				<form action="connexion.php" method="post">
+    				Pseudo: <input type="text" name="pseudo" value="" />
+    				Mot de passe: <input type="password" name="mot_de_passe" value="" />
+    				<input type="submit" name="connexion" value="Connexion" />
+				</form>
+				<a href="register.php">Pas encore inscrit ?</a>
 		</center>
-        </form>
-		
- </body>
-
+	</body>
 </html>
