@@ -16,7 +16,7 @@ function Anim_Q(Enter, Exit)
 
 function VerifChoix()
 {
-    if(document.getElementById("cChoix").checked == true)
+    if(document.getElementById("cChoix").checked)
     {
         document.getElementById("btn_valider").classList.remove("disabled");
     }

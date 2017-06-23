@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html onload="ResetResultat();">
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="Model/css/bootstrap.css">
@@ -40,10 +40,10 @@
 					<center><h3></br></br>Question 1</h3></br></center>
 					<center><h4>Votre salle de classe est organisée...</h4></center></br>
 					<div class="alinea">
-						<input type="radio" name="q1" id="q1r1" checked/> ...de façon traditionnelle.<br />
-						<input type="radio" name="q1" id="q1r2"/> ...en îlot, en U, en espace de travail.<br />
-						<input type="radio" name="q1" id="q1r3"/> ...ça dépend des cours et des activités.<br />
-						<input type="radio" name="q1" id="q1r4"/> Je n'ai pas le choix.<br />
+						<input type="radio" name="q1" id="q1r1" checked/> ...de façon traditionnelle.<br/>
+						<input type="radio" name="q1" id="q1r2"/> ...en îlot, en U, en espace de travail.<br/>
+						<input type="radio" name="q1" id="q1r3"/> ...ça dépend des cours et des activités.<br/>
+						<input type="radio" name="q1" id="q1r4"/> Je n'ai pas le choix.<br/>
 					</div>
 				</div>
 				<ul class="pager">
@@ -198,7 +198,7 @@
 					<div class="alinea">
 						<input type="radio" name="q8" id="q8r1" checked/> Je varie les activités.<br />
 						<input type="radio" name="q8" id="q8r2"/> J'utilise des outils numériques interactifs.<br />
-						<input type="radio" name="q8" id="q8r3"/> Je favorise le pédagogie par projet.<br />
+						<input type="radio" name="q8" id="q8r3"/> Je favorise la pédagogie par projet.<br />
 					</div>
 				</div>
 				<ul class="pager">
@@ -277,10 +277,11 @@
 				<div class="caption">
 					<span style="color:#A60000; font-size:20px;" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span style="color:#8fcac0">  Questionnaire à choix multiples</span>
 					<center><h3></br></br>Résultat</h3></br></br></br>
+					<div id="Aff_Profile"></div></br>
+					<div id="Aff_S_Profil"></div>
 				</div>
 				<ul class="pager">
-					<li class="previous bas-gauche"><a href="#" onclick="Anim_Q('resultat', 'start');"><span aria-hidden="true">&larr;</span> Refaire le QCM</a></li>
-					<li class="next disabled bas-droite"><a href="#" onclick="Anim_Q('fin', 'start');">Valider <span aria-hidden="true">&rarr;</span></a></li>
+					<li class="previous bas-gauche"><a href="#" onclick="ResetResultat(); Anim_Q('resultat', 'start');"><span aria-hidden="true">&larr;</span> Refaire le QCM</a></li>
 				</ul>
 			</div>
 		</div>
