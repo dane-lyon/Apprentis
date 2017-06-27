@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Page de test</title>
+	</head>
+	<body onload="CacherDiv();">
+		Afficher la div ?
+		<select id="select">
+			<option value="0" onclick="CacherDiv();">Non</option> 
+			<option value="1" onclick="AfficherDiv();">Oui</option>
+		</select>
+		<div id="Divtest">Test</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var elem = document.getElementById("Divtest");
+	function CacherDiv()
+	{
+		elem.style.visibility = "hidden";
+	}
+
+	function AfficherDiv()
+	{
+		elem.style.visibility = "visible";
+	}
+</script>
