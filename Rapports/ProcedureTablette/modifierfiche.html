@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	
+	<body>
+		
+		<center>
+		 	<img src="logo.png"> <br><br><br>
+		</center>
+		<div class="center-div">
+							
+		<center>
+			<form action="/ma-page-de-traitement" method="post">
+    			<div>
+        			Titre :	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        			<input type="text" id="titre" />
+    			</div>
+    			<div>
+        			Etablissement : &nbsp
+        			<input type="text" id="etablissement" />
+    			</div>
+    			<div>
+					Date : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        			<input type="text" id="etablissement" /><br><br><br>
+					
+					Problème(s) rencontré(s) : <br>
+					<textarea name="probleme" rows=10 cols=70>Description des problèmes</textarea><br><br><br>
+					
+					Action(s) réalisée(s) <br>
+					<textarea name="action" rows=10 cols=70>Les manipulations effectuées par le dépanneur</textarea><br><br><br>
+					
+					Information(s) complémentaire(s) <br>
+					<textarea name="comentaire" rows=5 cols=70></textarea><br><br><br>
+					
+					Problème(s) résolu(s) ? <br>
+					<input type="radio" id="problemeok" /> Oui
+					<input type="radio" id="problemeoketnon" /> Pas complètement
+					<input type="radio" id="problemnon" /> Non <br><br><br>
+					
+					<input type="submit" name="envoi" value="Confirmer la modification de la fiche">
+    			</div>
+			</form>
+		</center>
+		</div>
+		
+	</body>
+</html>
