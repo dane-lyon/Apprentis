@@ -1,0 +1,55 @@
+body {
+    background: url(../images/fond.png);
+}
+
+li:hover {
+    background-color: rgb(181, 225, 241);
+}
+
+.Dispo {
+    float: left;
+    margin-left: 1%;
+    width: 29%;
+}
+
+.Pris {
+    float: right;
+    margin-right: 1%;
+    width: 69%;
+}
+
+th {
+    text-align: center;
+}
+
+.AjoutMateriel {
+    float: left;
+    margin-top: 3%;
+    margin-left: 2%;
+    width: 30%;
+}
+
+.AjoutFormateur {
+    float: right;
+    margin-top: 3%;
+    margin-right: 3%;
+    width: 30%;
+}
+
+.AjoutCategorie {
+    float: right;
+    margin-top: 3%;
+    margin-right: 2%;
+    width: 30%;
+}
+
+.FormEmprunt {
+    margin-top: 3%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.RetourMatos {
+    text-align: center;
+}
